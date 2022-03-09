@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+
+<html>
+    
+  
+    <head>
+
+
+        <meta charset="utf-8">
+
+
+        <title>BlackJack</title>
+
+        <style>
+        body{
+        background-color:rgb(75, 117, 84);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+        .start{
+            height:25px;
+            width:75px;
+        }
+        </style>
+
+    </head>
+
+<body>
+
+
+<h1>BlackJack</h1>
+<form>
+<button class="start" name="start" type="button">start</button>
+</form>
+</body>
+
+
+<script>
+        
+    //add betting system
+    
+    //add visuals
+
+    //player 2 or computer dealer?
+
+    //deck of cards with values
+
+    
+var suits = ["Spades", "Hearts", "Diamonds", "Clubs"];
+    var values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+    var deck = new Array();
+
+    function createdeck (){
+
+        deck=new Array()
+        for (var i=0; i< values.length; i++){
+            for (var x=0; x< suits.length; x++){
+                
+                var tempWeight = values[i]
+
+                
+                
+
+                if (tempWeight == "J" || tempWeight == "Q" || tempWeight == "K"){
+                    tempWeight = 10;}
+
+                if (tempWeight == "A"){
+                    tempWeight = 11;}
+
+                var card = { Value: values[i], Suit: suits[x], weight: tempWeight };
+               
+                deck.push(card);
+                
+            }
+        }
+       for (var i=0; i < deck.length; i++){
+          console.log(deck[i])
+      }
+    }
+   createdeck()
+   
+
+   let random1 = Math.floor(Math.random()*deck.length);
+   console.log(deck[random1])
+   let random2 = Math.floor(Math.random()*deck.length);
+   console.log(deck[random2])
+   
+
+
+    //"shuffle" values of 2 cards
+    
+    //random new cards THAT EXCLUDE cards already active
+    var startButton = document.getElementById('start');
+        var startButton = function() {
+            
+        }
+    </script>
+
+
+</html>
